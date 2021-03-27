@@ -1,0 +1,13 @@
+:root {
+    --main-color: #e98074;
+    --text-color: #8e8d8a;
+    --second-color: #eae7dc;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+h1 {
+    font-size: ;
+}
