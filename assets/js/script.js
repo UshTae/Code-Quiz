@@ -100,7 +100,7 @@ function startGame() {
     setTime();
 
     //first question appears
-    firstQuestion();
+    questionChange();
 };
 
 //setting timer function
@@ -127,11 +127,16 @@ function setTime() {
     
 }
 
-// click event for user selecting question
-questionsScreen.addEventListener("click", questionChange());
+// // click event for user selecting question
+// questionsScreen.addEventListener("click", questionChange());
 
-//first question displayed as default
-function firstQuestion(){
+// function for if a choice chosen, verify right or wrong and 
+// start questionChange()
+
+
+//function to grab and append question objects 
+function questionChange() {
+
     var t1 = document.createElement('h2');
     var title1 = questions[0].title;
     t1.textContent= title1;
@@ -143,41 +148,28 @@ function firstQuestion(){
         var button1A = questions[0].choices[0];
         btn1A.textContent= button1A;
         lists[0].appendChild(btn1A);
-        //event listener
-            btn1A.addEventListener("click",verify());
-
+      
         var btn1B = document.createElement('button');
         var button1B = questions[0].choices[1];
         btn1B.textContent= button1B;
-        lists[1].appendChild(btn1B);
-        //event listener
-             btn1B.addEventListener("click",verify());
+        lists[1].appendChild(btn1B);    
 
         var btn1C = document.createElement('button');
         var button1C = questions[0].choices[2];
         btn1C.textContent= button1C;
-        lists[2].appendChild(btn1C);
-        //event listener
-            btn1C.addEventListener("click",verify());
+        lists[2].appendChild(btn1C);   
 
         var btn1D = document.createElement('button');
         var button1D = questions[0].choices[3];
         btn1D.textContent= button1D;
         lists[3].appendChild(btn1D);
-        //event listener
-            btn1D.addEventListener("click",verify());
- 
-    //conditional for if a choice chosen, start questionChange()
-}
-
-//function to grab and append question objects 
-function questionChange() {
-
-    //append title name
-
-    // grab ul element and under under list elements append
-    // first buttons
-}
+           
+    //event listeners 
+    btn1A.addEventListener("click",verify());
+    btn1B.addEventListener("click",verify());
+    btn1C.addEventListener("click",verify());
+    btn1D.addEventListener("click",verify());
+};
 // get current question object from array
 	// update title with current question
 	// clear out any old question choices
@@ -185,3 +177,9 @@ function questionChange() {
 	// create new button for each choice
 	// attach click event listener to each choice
 	// display on the page
+
+function verify() {
+    //if it equals the answer, it'll return the correct or
+    // wrong on page, then next question will occur
+
+};
