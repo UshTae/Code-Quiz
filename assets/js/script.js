@@ -4,10 +4,10 @@ var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.getElementById("time");
 var questionTitle = document.getElementById("title");
-var button1 = document.getElementById("btn1");
-var button2 = document.getElementById("btn2");
-var button3 = document.getElementById("btn3");
-var button4 = document.getElementById("btn4");
+var button1 = document.getElementById("1");
+var button2 = document.getElementById("2");
+var button3 = document.getElementById("3");
+var button4 = document.getElementById("4");
 
 //questions array
 var questions = [
@@ -20,7 +20,7 @@ var questions = [
         "Object-Orientated",
         "High-level",
     ],
-    answer:"Object-Based",
+    answer:"2",
 },
 {
         //q2
@@ -31,7 +31,7 @@ var questions = [
         "Declaration statements",
         "Prototypes",
     ],
-    answer:"Declaration statements",
+    answer:"3",
 },
 {
         //q3
@@ -42,7 +42,7 @@ var questions = [
         "The two of the above",
         "None of the above",
     ],
-    answer:"The local element",
+    answer:"2",
 },
 {
         //q4
@@ -53,7 +53,7 @@ var questions = [
         "Loop",
         "Conditional",
     ],
-    answer:"Conditional",
+    answer:"4",
 },
 {
         //q5
@@ -65,7 +65,7 @@ var questions = [
         "logged",
 
     ],
-    answer:"Called",
+    answer:"3",
 }];
 
 
@@ -151,20 +151,23 @@ function currentQuest() {
     button4.textContent = btn4;
 
     // attach click event listener to each choice
-    button1.addEventListener("click",validate);
-    button2.addEventListener("click",validate);
-    button3.addEventListener("click",validate);
-    button4.addEventListener("click",validate);
+    button1.addEventListener("click",validate(this));
+    button2.addEventListener("click",validate(this));
+    button3.addEventListener("click",validate(this));
+    button4.addEventListener("click",validate(this));
 
-    function validate(event) {
+    function validate(element) {
+
         var answerTrue = questions[i].answer;
 
-        if(answerTrue = event.target.value) {
-            console.log("true")
-        };
-    };
-   
+        if (answerTrue = element.id) {
+            console.log("yes");
+        }else {
+            console.log("damnit");
+        }
     
+   
+    };
     // if (answerTrue = the user answer, increase i by 1 else increase i
     // and run notAnswer()
 
