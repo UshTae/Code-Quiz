@@ -2,10 +2,11 @@
 var startButton = document.querySelector(".start-Button");
 
 
+//variables to keep track of quiz state
 
-// list of all questions, choices, and answers.
-
-​questions = [
+// list of first set of questions, choices, and answers.
+// Others to be appended after
+​var questions = 
     {
         title: "What type of language is JavaScript",
         choices: [
@@ -15,55 +16,18 @@ var startButton = document.querySelector(".start-Button");
             "High-level",
         ],
         answer:"Object-Based",
-    },
-    {
-        title:" 'Function' and 'Var' are known as: ",
-        choices: [
-            "Keywords",
-            "Data types",
-            "Declaration statements",
-            "Prototypes",
-        ],
-        answer:"Declaration statements",
-    },
-    {
-        title:"Which of the following variables takes precedence over the others if the names are the same?",
-        choices: [
-            "Global variable",
-            "The local element",
-            "The two of the above",
-            "None of the above",
-        ],
-        answer:"The local element",
-    },
-    {
-        title:"What type of statements are IF statements?.",
-        choices: [
-            "Declaration",
-            "Block",
-            "Loop",
-            "Conditional",
-        ],
-        answer:"Conditional",
-    },
-    {
-        title:"Functions must be _ to execute",
-        choices: [
-            "Deleted",
-            "Re-defined",
-            "Called",
-            "logged",
-
-        ],
-        answer:"Called",
-    },
-]
+    }
 
 // listener event to start game when start button clicked
 startButton.addEventListener("click", startGame);
 
+//submit score listener
+
 // function to dictate what happens when button pressed 
 function startGame() {
-
-}
+    //hide start screen
+    //unhide questions section
+    //start timer 
+    //show starting time
+};
 
