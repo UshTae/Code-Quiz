@@ -36,6 +36,19 @@ function startGame() {
 };
 
 function setTime() {
-    // sets interval in variable 
+    // sets interval in variable
+    var timerInterval = setInterval(function(){
+        secondsLeft --;
+        
+        // display time on screen 
+        // timeEl.textContent = "Time: " + secondsLeft; 
+
+        if (secondsLeft === 0) {
+            // stops timer at end
+            clearInterval(timerInterval);
+
+            return;
+        }
+    },1000)
     
 }
