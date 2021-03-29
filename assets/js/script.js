@@ -127,10 +127,10 @@ function setTime() {
 }
 
 //button elements
-var choice1 = getElementById("btn1");
-var choice2 = getElementById("btn2");
-var choice3 = getElementById("btn3");
-var choice4 = getElementById("btn4");
+var choice1 = document.getElementById("btn1");
+var choice2 = document.getElementById("btn2");
+var choice3 = document.getElementById("btn3");
+var choice4 = document.getElementById("btn4");
 
 //function to grab and append question objects 
 function questionChange() {
