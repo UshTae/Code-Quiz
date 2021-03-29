@@ -5,6 +5,7 @@ var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.querySelector("#time");
 var questionUl = document.querySelector("ul");
 var questionTitle = document.querySelector("#title");
+var lists = document.querySelectorAll("li")
 
 // hide questions section by default 
 questionsScreen.style.display = "block";
@@ -13,6 +14,7 @@ questionsScreen.style.display = "none";
 //questions array
 var questions = [
     {
+        // question 1
     title: "What type of language is JavaScript?",
     choices: [
         "Assembly-Language",
@@ -23,6 +25,7 @@ var questions = [
     answer:"Object-Based",
 },
 {
+        //q2
     title:" 'Function' and 'Var' are known as: ",
     choices: [
         "Keywords",
@@ -33,6 +36,7 @@ var questions = [
     answer:"Declaration statements",
 },
 {
+        //q3
     title:"Which of the following variables takes precedence over the others if the names are the same?",
     choices: [
         "Global variable",
@@ -43,6 +47,7 @@ var questions = [
     answer:"The local element",
 },
 {
+        //q4
     title:"What type of statements are IF statements?.",
     choices: [
         "Declaration",
@@ -53,6 +58,7 @@ var questions = [
     answer:"Conditional",
 },
 {
+        //q5
     title:"Functions must be _ to execute",
     choices: [
         "Deleted",
@@ -92,7 +98,10 @@ function startGame() {
         questionsScreen.style.display = "block";
 
     //start timer
-    setTime()
+    setTime();
+
+    //first question appears
+    firstQuestion();
 };
 
 //setting timer function
@@ -122,19 +131,28 @@ function setTime() {
 // click event for user selecting question
 questionsScreen.addEventListener("click", questionChange());
 
+//first question displayed as default
+function firstQuestion(){
+    var t1 = document.createElement('h2');
+    var title1 = questions[0].title;
+    t1.textContent= title1;
+    questionsScreen.appendChild(t1);
+
+    var btn1A = document.createElement('button');
+    var button1A = questions[0].choices[0];
+    btn1A.textContent= button1A;
+    lists[0].appendChild(btn1A);
+
+    //conditional for if a choice chosen, start questionChange()
+}
+
 //function to grab and append question objects 
-function questionChange(event) {
-    event.stopPropagation();
+function questionChange() {
 
     //append title name
 
-
-
     // grab ul element and under under list elements append
     // first buttons
-    var questionBtn = document.createElement('button');
-
-    
 }
 // get current question object from array
 	// update title with current question

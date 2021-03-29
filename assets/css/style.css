@@ -34,6 +34,8 @@ li {
     padding: 5px;
     display: flex;
     justify-content: center;
+    position: relative;
+
     
 }
 
@@ -56,8 +58,11 @@ button {
     color: var(--dark);
     font-weight: bold;
 }
-
-.title-screen, .questions-screen {
+.questions-screen {
+    margin-top: 100px;
+    
+}
+.title-screen  {
     margin-top: 250px;
 }
 
