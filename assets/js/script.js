@@ -1,9 +1,10 @@
-//------------------------------------
-//QUESTIONS
-//------------------------------------
-​
+// dom elements 
+var startButton = document.querySelector(".start-Button");
+
+
+
 // list of all questions, choices, and answers.
-​
+
 ​questions = [
     {
         title: "What type of language is JavaScript",
@@ -57,3 +58,12 @@
         answer:"Called",
     },
 ]
+
+// listener event to start game when start button clicked
+startButton.addEventListener("click", startGame);
+
+// function to dictate what happens when button pressed 
+function startGame() {
+
+}
+
