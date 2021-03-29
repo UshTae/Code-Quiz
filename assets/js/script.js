@@ -132,8 +132,8 @@ var choice2 = document.getElementById("btn2");
 var choice3 = document.getElementById("btn3");
 var choice4 = document.getElementById("btn4");
 
-// object with button elements 
-var userChoice = {choice1, choice2, choice3, choice4};
+// array? with button elements 
+var userChoice = [choice1, choice2, choice3, choice4];
 
 //all choices of questions object
 var choiceList1 = questions[0].choices;
@@ -141,14 +141,16 @@ var choiceList2 = questions[1].choices;
 var choiceList3 = questions[2].choices;
 var choiceList4 = questions[3].choices;
 
-//object with choice elements
-var choiceList = {choiceList1, choiceList2, choiceList3, choiceList4};
+//array? with choice elements
+var choiceList = [choiceList1, choiceList2, choiceList3, choiceList4];
 
 //function to grab and append question objects 
 function questionChange() {
 
-    for (let key in questions) {
-        console.log(questions[key]);
+    //change title to current question
+    //i changes until it reaches 4 (amount of choices)
+    for (i = 0; i = userChoice.length; i++){
+        
     }
   
      
