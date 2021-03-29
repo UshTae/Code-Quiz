@@ -1,7 +1,7 @@
 //list of questions 
 
 {
-        title: "What type of language is JavaScript",
+        title: "What type of language is JavaScript?",
         choices: [
             "Assembly-Language",
             "Object-Based",
