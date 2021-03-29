@@ -123,12 +123,13 @@ function setTime() {
 }
 
 // click event for user selecting question
-// create output for right and wrong answers? 
+questionsScreen.addEventListener("click", questionChange); 
 
 //function to grab and append question objects 
 function questionChange() {
+    targe
     // loop through questions
-    for (i = questions.length;)
+    
 }
 // get current question object from array
 	// update title with current question
