@@ -127,22 +127,21 @@ function setTime() {
 };
 
 //GETTING QUESTIONS
-	// get current question object from array
+	
 function currentQuest() {
-    for (var i = 0; i< 4; i++){
-        var currentQuestion = questions[i].title;
-        questionTitle.textContent = currentQuestion;
-    };
-  
+   // get current question object from array
+    var i = 0;
+    var currentQuestion = questions[i].title;
+    // update title with current question
+    questionTitle.textContent = currentQuestion;
 };
 
-	// update title with current question
-	// clear out any old question choices
-	// loop over choices
-	// create new button for each choice
-	// attach click event listener to each choice
-	// display on the page
 
+// clear out any old question choices
+// loop over choices
+// create new button for each choice
+// attach click event listener to each choice
+// display on the page
 
 // if answer wrong time is taken away 
 function notAnswer() {
