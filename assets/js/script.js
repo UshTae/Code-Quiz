@@ -4,6 +4,10 @@ var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.getElementById("time");
 var questionTitle = document.getElementById("title");
+var button1 = document.getElementById("btn1");
+var button2 = document.getElementById("btn2");
+var button3 = document.getElementById("btn3");
+var button4 = document.getElementById("btn4");
 
 //questions array
 var questions = [
@@ -134,12 +138,20 @@ function currentQuest() {
     var currentQuestion = questions[i].title;
     // update title with current question
     questionTitle.textContent = currentQuestion;
+
+    // create new button for each choice
+   
+    // var answerTrue = questions.answer;
+
+    // if (answerTrue = the user answer, increase i by 1 else increase i
+    // and run notAnswer()
+
 };
 
 
 // clear out any old question choices
 // loop over choices
-// create new button for each choice
+
 // attach click event listener to each choice
 // display on the page
 
