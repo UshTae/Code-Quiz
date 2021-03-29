@@ -8,6 +8,9 @@ var timeEl = document.querySelector(".time")
 //variables to keep track of quiz state
 var secondsLeft = 90;
 
+// display initial time on screen 
+timeEl.textContent = "Time: " + secondsLeft;
+
 // list of first set of questions, choices, and answers.
 // Others to be appended after
 
@@ -31,8 +34,6 @@ function startGame() {
 
     //start timer
     setTime()
-
-    //show starting time
 };
 
 function setTime() {
@@ -40,8 +41,10 @@ function setTime() {
     var timerInterval = setInterval(function(){
         secondsLeft --;
         
-        // display time on screen 
-        // timeEl.textContent = "Time: " + secondsLeft; 
+        // display changing time on screen 
+        timeEl.textContent = "Time: " + secondsLeft;
+         
+        console.log(secondsLeft);
 
         if (secondsLeft === 0) {
             // stops timer at end
@@ -52,3 +55,5 @@ function setTime() {
     },1000)
     
 }
+
+
