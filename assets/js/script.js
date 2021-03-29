@@ -137,38 +137,14 @@ function setTime() {
 //function to grab and append question objects 
 function questionChange() {
 
-    var t1 = document.createElement('h2');
-    var title1 = questions[0].title;
-    t1.textContent= title1;
-    questionsScreen.appendChild(t1);
-    //inserting question before ul
-    questionUl.insertAdjacentElement('beforebegin',t1);
-
-        var btn1A = document.createElement('button');
-        var button1A = questions[0].choices[0];
-        btn1A.textContent= button1A;
-        lists[0].appendChild(btn1A);
-      
-        var btn1B = document.createElement('button');
-        var button1B = questions[0].choices[1];
-        btn1B.textContent= button1B;
-        lists[1].appendChild(btn1B);    
-
-        var btn1C = document.createElement('button');
-        var button1C = questions[0].choices[2];
-        btn1C.textContent= button1C;
-        lists[2].appendChild(btn1C);   
-
-        var btn1D = document.createElement('button');
-        var button1D = questions[0].choices[3];
-        btn1D.textContent= button1D;
-        lists[3].appendChild(btn1D);
+    //address each element in dom 
+    //change content rather than appending new children
            
     //event listeners 
-    btn1A.addEventListener("click",verify());
-    btn1B.addEventListener("click",verify());
-    btn1C.addEventListener("click",verify());
-    btn1D.addEventListener("click",verify());
+    btn1A.addEventListener("click",notAnswer);
+    btn1B.addEventListener("click",questionChange);
+    btn1C.addEventListener("click",notAnswer);
+    btn1D.addEventListener("click",notAnswer);
 };
 // get current question object from array
 	// update title with current question
@@ -178,10 +154,8 @@ function questionChange() {
 	// attach click event listener to each choice
 	// display on the page
 
-function verify() {
-    //if it equals the answer, it'll return the correct or
-    // wrong on page, then next question will occur
-    if (document.querySelector(btn1A).clicked == true){
-        console.log("clicked")
-    },
-};
+// if answer wrong time is taken away 
+function notAnswer() {
+    secondsLeft -=10;
+    questionChange();
+}
