@@ -125,6 +125,15 @@ function setTime() {
     },1000)
     
 }
+//all title options
+var title1 = questions[0].title;
+var title2 = questions[1].title;
+var title3 = questions[2].title;
+var title4 = questions[3].title;
+
+// array with title elements 
+
+var questionCurrent = [title1, title2, title3, title4]
 
 //button elements
 var choice1 = document.getElementById("btn1");
@@ -150,7 +159,9 @@ function questionChange() {
     //change title to current question
     //i changes until it reaches 4 (amount of choices)
     for (i = 0; i = userChoice.length; i++){
-        
+        //update title with current question, i = choice
+        questionTitle.textContent = 
+
     }
   
      
