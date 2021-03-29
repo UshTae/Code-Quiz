@@ -137,11 +137,34 @@ function firstQuestion(){
     var title1 = questions[0].title;
     t1.textContent= title1;
     questionsScreen.appendChild(t1);
+    //inserting question before ul
+    questionUl.insertAdjacentElement('beforebegin',t1);
 
-    var btn1A = document.createElement('button');
-    var button1A = questions[0].choices[0];
-    btn1A.textContent= button1A;
-    lists[0].appendChild(btn1A);
+        var btn1A = document.createElement('button');
+        var button1A = questions[0].choices[0];
+        btn1A.textContent= button1A;
+        lists[0].appendChild(btn1A);
+
+        var btn1A = document.createElement('button');
+        var button1A = questions[0].choices[1];
+        btn1A.textContent= button1A;
+        lists[0].appendChild(btn1A);
+
+        var btn1A = document.createElement('button');
+        var button1A = questions[0].choices[2];
+        btn1A.textContent= button1A;
+        lists[0].appendChild(btn1A);
+
+        var btn1A = document.createElement('button');
+        var button1A = questions[0].choices[3];
+        btn1A.textContent= button1A;
+        lists[0].appendChild(btn1A);
+
+        var btn1A = document.createElement('button');
+        var button1A = questions[0].choices[4];
+        btn1A.textContent= button1A;
+        lists[0].appendChild(btn1A);
+    
 
     //conditional for if a choice chosen, start questionChange()
 }

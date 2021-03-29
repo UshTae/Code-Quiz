@@ -34,8 +34,6 @@ li {
     padding: 5px;
     display: flex;
     justify-content: center;
-    position: relative;
-
     
 }
 
@@ -60,7 +58,6 @@ button {
 }
 .questions-screen {
     margin-top: 100px;
-    
 }
 .title-screen  {
     margin-top: 250px;
