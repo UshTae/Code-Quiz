@@ -5,11 +5,6 @@ var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.querySelector("#time");
 var questionTitle = document.querySelector("#title");
 
-
-// hide questions section by default 
-questionsScreen.style.display = "block";
-questionsScreen.style.display = "none";
-
 //questions array
 var questions = [
     {
@@ -69,6 +64,12 @@ var questions = [
     answer:"Called",
 }];
 
+
+// hide questions section by default 
+questionsScreen.style.display = "block";
+questionsScreen.style.display = "none";
+
+
 //variables to keep track of quiz state
 var secondsLeft = 90;
 
@@ -83,7 +84,6 @@ timeEl.textContent = "Time: " + secondsLeft;
 startButton.addEventListener("click", startGame);
 
 //submit score listener
-
 
 
 // function to dictate what happens when button pressed 
@@ -124,63 +124,25 @@ function setTime() {
         }
     },1000)
     
-}
-//all title options
-var title1 = questions[0].title;
-var title2 = questions[1].title;
-var title3 = questions[2].title;
-var title4 = questions[3].title;
-
-// array with title elements 
-
-var questionCurrent = [title1, title2, title3, title4]
-
-//button elements
-var choice1 = document.getElementById("btn1");
-var choice2 = document.getElementById("btn2");
-var choice3 = document.getElementById("btn3");
-var choice4 = document.getElementById("btn4");
-
-// array? with button elements 
-var userChoice = [choice1, choice2, choice3, choice4];
-
-//all choices of questions object
-var choiceList1 = questions[0].choices;
-var choiceList2 = questions[1].choices;
-var choiceList3 = questions[2].choices;
-var choiceList4 = questions[3].choices;
-
-//array? with choice elements
-var choiceList = [choiceList1, choiceList2, choiceList3, choiceList4];
+};
 
 //function to grab and append question objects 
 function questionChange() {
+     
 
     //change title to current question
     //i changes until it reaches 4 (amount of choices)
-    for (i = 0; i = userChoice.length; i++){
-        //update title with current question, i = choice
-        questionTitle.textContent = 
-
+    for (i = 0; i = 4; i++){
+         
+       
+     //update title with current question, i = choice
+     questionTitle.textContent = questionCurrent[i];
     }
   
-     
-    //event listeners 
-    btn1.addEventListener("click",questionChange);
-    btn2.addEventListener("click",questionChange);
-    btn3.addEventListener("click",questionChange);
-    btn4.addEventListener("click",questionChange);
 };
-// get current question object from array
-	// update title with current question
-	// clear out any old question choices
-	// loop over choices
-	// create new button for each choice
-	// attach click event listener to each choice
-	// display on the page
 
 // if answer wrong time is taken away 
 function notAnswer() {
     secondsLeft -=10;
     questionChange();
-}
+};
