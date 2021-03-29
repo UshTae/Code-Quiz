@@ -14,15 +14,16 @@ startButton.addEventListener("click", startGame);
 
 //submit score listener
 // hide questions section by default 
-
+titleScreen.style.display = "block";
+    titleScreen.style.display = "none";
 
 // function to dictate what happens when button pressed 
 function startGame() {
     //hide start screen
-    titleScreen.style.display = "block";
-    titleScreen.style.display = "none";
+    
     
     //unhide questions section
+
 
     //start timer 
     //show starting time
