@@ -1,7 +1,8 @@
 :root {
     --main-color: #e98074;
     --second-color: #e85a4f;
-    --text-color: #8e8d8a;
+    --light: #8e8d8a;
+    --dark:#505050;
     --third-color: #eae7dc;
 }
 
@@ -25,7 +26,7 @@ h2 {
 
 p {
     font-size: 20px;
-    color: var(--text-color);
+    color: var(--light);
     text-align: center;
 }
 
@@ -46,6 +47,14 @@ button {
 #view-high {
     margin-left: 3%;
     line-height: 100px;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+#time {
+    margin-left: 3%;
+    color: var(--dark);
+    font-weight: bold;
 }
 
 .title-screen, .questions-screen {

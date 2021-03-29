@@ -2,7 +2,7 @@
 var startButton = document.querySelector("#start-Button");
 var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
-var timeEl = document.querySelector(".time")
+var timeEl = document.querySelector("time")
 
 
 //variables to keep track of quiz state
