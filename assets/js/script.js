@@ -2,11 +2,11 @@
 var startButton = document.querySelector("#start-Button");
 var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
-
+var timeEl = document.querySelector(".time")
 
 
 //variables to keep track of quiz state
-
+var secondsLeft = 90;
 
 // list of first set of questions, choices, and answers.
 // Others to be appended after
@@ -30,7 +30,12 @@ function startGame() {
         questionsScreen.style.display = "block";
 
     //start timer
+    setTime()
 
     //show starting time
 };
 
+function setTime() {
+    // sets interval in variable 
+    
+}
