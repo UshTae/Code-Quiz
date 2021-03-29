@@ -2,7 +2,9 @@
 var startButton = document.querySelector("#start-Button");
 var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
-var timeEl = document.querySelector("#time")
+var timeEl = document.querySelector("#time");
+var questionUl = document.querySelector("ul");
+var questionTitle = document.querySelector("#title");
 
 // hide questions section by default 
 questionsScreen.style.display = "block";
@@ -124,9 +126,14 @@ questionsScreen.addEventListener("click", questionChange());
 function questionChange(event) {
     event.stopPropagation();
 
+    //append title name
 
-   
-    // loop through questions
+
+
+    // grab ul element and under under list elements append
+    // first buttons
+    var questionBtn = document.createElement('button');
+
     
 }
 // get current question object from array
