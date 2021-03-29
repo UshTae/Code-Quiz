@@ -110,7 +110,7 @@ function setTime() {
         
         // display changing time on screen 
         timeEl.textContent = "Time: " + secondsLeft;
-          console.log(secondsLeft);
+        //   console.log(secondsLeft);
 
         //start function for penalty
 
@@ -132,15 +132,31 @@ var choice2 = document.getElementById("btn2");
 var choice3 = document.getElementById("btn3");
 var choice4 = document.getElementById("btn4");
 
+// object with button elements 
+var userChoice = {choice1, choice2, choice3, choice4};
+
+//all choices of questions object
+var choiceList1 = questions[0].choices;
+var choiceList2 = questions[1].choices;
+var choiceList3 = questions[2].choices;
+var choiceList4 = questions[3].choices;
+
+//object with choice elements
+var choiceList = {choiceList1, choiceList2, choiceList3, choiceList4};
+
 //function to grab and append question objects 
 function questionChange() {
 
+    for (let key in questions) {
+        console.log(questions[key]);
+    }
+  
      
     //event listeners 
-    btn1A.addEventListener("click",notAnswer);
-    btn1B.addEventListener("click",questionChange);
-    btn1C.addEventListener("click",notAnswer);
-    btn1D.addEventListener("click",notAnswer);
+    btn1.addEventListener("click",questionChange);
+    btn2.addEventListener("click",questionChange);
+    btn3.addEventListener("click",questionChange);
+    btn4.addEventListener("click",questionChange);
 };
 // get current question object from array
 	// update title with current question
