@@ -3,9 +3,8 @@ var startButton = document.querySelector("#start-Button");
 var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.querySelector("#time");
-var questionUl = document.querySelector("ul");
 var questionTitle = document.querySelector("#title");
-var lists = document.querySelectorAll("li")
+
 
 // hide questions section by default 
 questionsScreen.style.display = "block";
@@ -127,19 +126,16 @@ function setTime() {
     
 }
 
-// // click event for user selecting question
-// questionsScreen.addEventListener("click", questionChange());
-
-// function for if a choice chosen, verify right or wrong and 
-// start questionChange()
-
+//button elements
+var choice1 = getElementById("btn1");
+var choice2 = getElementById("btn2");
+var choice3 = getElementById("btn3");
+var choice4 = getElementById("btn4");
 
 //function to grab and append question objects 
 function questionChange() {
 
-    //address each element in dom 
-    //change content rather than appending new children
-           
+     
     //event listeners 
     btn1A.addEventListener("click",notAnswer);
     btn1B.addEventListener("click",questionChange);
