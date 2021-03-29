@@ -4,9 +4,14 @@ var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.querySelector("#time")
 
+// hide questions section by default 
+questionsScreen.style.display = "block";
+questionsScreen.style.display = "none";
+
 //questions array
 var questions = [
     {
+    number: 1,
     title: "What type of language is JavaScript?",
     choices: [
         "Assembly-Language",
@@ -17,6 +22,7 @@ var questions = [
     answer:"Object-Based",
 },
 {
+    number: 2,
     title:" 'Function' and 'Var' are known as: ",
     choices: [
         "Keywords",
@@ -27,6 +33,7 @@ var questions = [
     answer:"Declaration statements",
 },
 {
+    number: 3,
     title:"Which of the following variables takes precedence over the others if the names are the same?",
     choices: [
         "Global variable",
@@ -37,6 +44,7 @@ var questions = [
     answer:"The local element",
 },
 {
+    number: 4,
     title:"What type of statements are IF statements?.",
     choices: [
         "Declaration",
@@ -47,6 +55,7 @@ var questions = [
     answer:"Conditional",
 },
 {
+    number: 5,
     title:"Functions must be _ to execute",
     choices: [
         "Deleted",
@@ -60,6 +69,8 @@ var questions = [
 
 //variables to keep track of quiz state
 var secondsLeft = 90;
+var questionNum = 1;
+console.log(questionNum);
 
 // display initial time on screen 
 timeEl.textContent = "Time: " + secondsLeft;
@@ -72,9 +83,7 @@ startButton.addEventListener("click", startGame);
 
 //submit score listener
 
-// hide questions section by default 
-questionsScreen.style.display = "block";
-questionsScreen.style.display = "none";
+
 
 // function to dictate what happens when button pressed 
 function startGame() {
@@ -89,6 +98,7 @@ function startGame() {
     setTime()
 };
 
+//setting timer function
 function setTime() {
     // sets interval in variable
     var timerInterval = setInterval(function(){
@@ -112,7 +122,14 @@ function setTime() {
     
 }
 
+// click event for user selecting question
+// create output for right and wrong answers? 
 
+//function to grab and append question objects 
+function questionChange() {
+    // loop through questions
+    for (i = questions.length;)
+}
 // get current question object from array
 	// update title with current question
 	// clear out any old question choices
