@@ -1,6 +1,7 @@
 // dom elements 
 var startButton = document.querySelector("#start-Button");
 var titleScreen = document.querySelector(".title-screen");
+var questionsScreen = document.querySelector(".questions-screen");
 
 
 //variables to keep track of quiz state
@@ -9,18 +10,20 @@ var titleScreen = document.querySelector(".title-screen");
 // Others to be appended after
 
 // listener event to start game when start button clicked
-startButton.addEventListener("click", startGame)
+startButton.addEventListener("click", startGame);
 
 //submit score listener
+// hide questions section by default 
+
 
 // function to dictate what happens when button pressed 
 function startGame() {
     //hide start screen
     titleScreen.style.display = "block";
-    titleScreen.style.display = "none"
+    titleScreen.style.display = "none";
     
-
     //unhide questions section
+
     //start timer 
     //show starting time
 };
