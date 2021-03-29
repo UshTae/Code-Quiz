@@ -72,8 +72,7 @@ var questions = [
 
 //variables to keep track of quiz state
 var secondsLeft = 90;
-var questionNum = 1;
-console.log(questionNum);
+
 
 // display initial time on screen 
 timeEl.textContent = "Time: " + secondsLeft;
@@ -145,25 +144,25 @@ function firstQuestion(){
         btn1A.textContent= button1A;
         lists[0].appendChild(btn1A);
 
-        var btn1A = document.createElement('button');
-        var button1A = questions[0].choices[1];
-        btn1A.textContent= button1A;
-        lists[0].appendChild(btn1A);
+        var btn1B = document.createElement('button');
+        var button1B = questions[0].choices[1];
+        btn1B.textContent= button1B;
+        lists[0].appendChild(btn1B);
 
-        var btn1A = document.createElement('button');
-        var button1A = questions[0].choices[2];
-        btn1A.textContent= button1A;
-        lists[0].appendChild(btn1A);
+        var btn1C = document.createElement('button');
+        var button1C = questions[0].choices[2];
+        btn1C.textContent= button1C;
+        lists[0].appendChild(btn1C);
 
-        var btn1A = document.createElement('button');
-        var button1A = questions[0].choices[3];
-        btn1A.textContent= button1A;
-        lists[0].appendChild(btn1A);
+        var btn1D = document.createElement('button');
+        var button1D = questions[0].choices[3];
+        btn1D.textContent= button1D;
+        lists[0].appendChild(btn1D);
 
-        var btn1A = document.createElement('button');
-        var button1A = questions[0].choices[4];
-        btn1A.textContent= button1A;
-        lists[0].appendChild(btn1A);
+        var btn1E = document.createElement('button');
+        var button1E = questions[0].choices[4];
+        btn1E.textContent= button1E;
+        lists[0].appendChild(btn1E);
     
 
     //conditional for if a choice chosen, start questionChange()
