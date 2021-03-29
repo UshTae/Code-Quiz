@@ -147,18 +147,18 @@ function firstQuestion(){
         var btn1B = document.createElement('button');
         var button1B = questions[0].choices[1];
         btn1B.textContent= button1B;
-        lists[0].appendChild(btn1B);
+        lists[1].appendChild(btn1B);
 
         var btn1C = document.createElement('button');
         var button1C = questions[0].choices[2];
         btn1C.textContent= button1C;
-        lists[0].appendChild(btn1C);
+        lists[2].appendChild(btn1C);
 
         var btn1D = document.createElement('button');
         var button1D = questions[0].choices[3];
         btn1D.textContent= button1D;
-        lists[0].appendChild(btn1D);
-        
+        lists[3].appendChild(btn1D);
+
     //conditional for if a choice chosen, start questionChange()
 }
 
