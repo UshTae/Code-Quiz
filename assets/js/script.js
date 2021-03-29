@@ -143,22 +143,30 @@ function firstQuestion(){
         var button1A = questions[0].choices[0];
         btn1A.textContent= button1A;
         lists[0].appendChild(btn1A);
+        //event listener
+            btn1A.addEventListener("click",verify());
 
         var btn1B = document.createElement('button');
         var button1B = questions[0].choices[1];
         btn1B.textContent= button1B;
         lists[1].appendChild(btn1B);
+        //event listener
+             btn1B.addEventListener("click",verify());
 
         var btn1C = document.createElement('button');
         var button1C = questions[0].choices[2];
         btn1C.textContent= button1C;
         lists[2].appendChild(btn1C);
+        //event listener
+            btn1C.addEventListener("click",verify());
 
         var btn1D = document.createElement('button');
         var button1D = questions[0].choices[3];
         btn1D.textContent= button1D;
         lists[3].appendChild(btn1D);
-
+        //event listener
+            btn1D.addEventListener("click",verify());
+ 
     //conditional for if a choice chosen, start questionChange()
 }
 
