@@ -1,9 +1,9 @@
 // dom elements 
-var startButton = document.querySelector("#start-Button");
+var startButton = document.getElementById("start-Button");
 var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
-var timeEl = document.querySelector("#time");
-var questionTitle = document.querySelector("#title");
+var timeEl = document.getElementById("time");
+var questionTitle = document.getElementById("title");
 
 //questions array
 var questions = [
@@ -99,7 +99,7 @@ function startGame() {
     setTime();
 
     //first question appears
-    questionChange();
+    currentQuest();
 };
 
 //setting timer function
@@ -126,20 +126,23 @@ function setTime() {
     
 };
 
-//function to grab and append question objects 
-function questionChange() {
-     
-
-    //change title to current question
-    //i changes until it reaches 4 (amount of choices)
-    for (i = 0; i = 4; i++){
-         
-       
-     //update title with current question, i = choice
-     questionTitle.textContent = questionCurrent[i];
-    }
+//GETTING QUESTIONS
+	// get current question object from array
+function currentQuest() {
+    for (var i = 0; i< 4; i++){
+        var currentQuestion = questions[i].title;
+        questionTitle.textContent = currentQuestion;
+    };
   
 };
+
+	// update title with current question
+	// clear out any old question choices
+	// loop over choices
+	// create new button for each choice
+	// attach click event listener to each choice
+	// display on the page
+
 
 // if answer wrong time is taken away 
 function notAnswer() {
