@@ -181,5 +181,7 @@ function questionChange() {
 function verify() {
     //if it equals the answer, it'll return the correct or
     // wrong on page, then next question will occur
-
+    if (document.querySelector(btn1A).clicked == true){
+        console.log("clicked")
+    },
 };
