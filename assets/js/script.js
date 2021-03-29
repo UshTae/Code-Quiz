@@ -68,7 +68,6 @@ var questions = [
     answer:"3",
 }];
 
-
 // hide questions section by default 
 questionsScreen.style.display = "block";
 questionsScreen.style.display = "none";
@@ -155,23 +154,19 @@ function currentQuest() {
     button2.addEventListener("click",validate(this));
     button3.addEventListener("click",validate(this));
     button4.addEventListener("click",validate(this));
-
-    function validate(element) {
-
-        var answerTrue = questions[i].answer;
-
-        if (answerTrue = element.id) {
-            console.log("yes");
-        }else {
-            console.log("damnit");
-        }
     
-   
-    };
+    //variable for answers in questions object
+    function validate(el){
+     var answerTrue = questions[i].answer;
+    console.log(answerTrue);
+    console.log(el.value)
+    }
+    
     // if (answerTrue = the user answer, increase i by 1 else increase i
     // and run notAnswer()
 
 };
+
 
 
 // clear out any old question choices
