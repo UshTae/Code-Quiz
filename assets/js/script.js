@@ -140,9 +140,31 @@ function currentQuest() {
     questionTitle.textContent = currentQuestion;
 
     // create new button for each choice
-   
-    // var answerTrue = questions.answer;
+   var btn1 = questions[i].choices[0];
+   var btn2 = questions[i].choices[1];
+   var btn3 = questions[i].choices[2];
+   var btn4 = questions[i].choices[3];
 
+    button1.textContent = btn1;
+    button2.textContent = btn2;
+    button3.textContent = btn3;
+    button4.textContent = btn4;
+
+    // attach click event listener to each choice
+    button1.addEventListener("click",validate);
+    button2.addEventListener("click",validate);
+    button3.addEventListener("click",validate);
+    button4.addEventListener("click",validate);
+
+    function validate(event) {
+        var answerTrue = questions[i].answer;
+
+        if(answerTrue = event.target.value) {
+            console.log("true")
+        };
+    };
+   
+    
     // if (answerTrue = the user answer, increase i by 1 else increase i
     // and run notAnswer()
 
@@ -152,7 +174,7 @@ function currentQuest() {
 // clear out any old question choices
 // loop over choices
 
-// attach click event listener to each choice
+
 // display on the page
 
 // if answer wrong time is taken away 
