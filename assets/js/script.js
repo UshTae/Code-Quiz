@@ -16,7 +16,8 @@ startButton.addEventListener("click", startGame)
 // function to dictate what happens when button pressed 
 function startGame() {
     //hide start screen
-    var state = titleScreen.getAttribute("data-state");
+    titleScreen.style.display = "block";
+    titleScreen.style.display = "none"
     
 
     //unhide questions section
