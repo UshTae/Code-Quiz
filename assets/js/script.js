@@ -11,7 +11,6 @@ questionsScreen.style.display = "none";
 //questions array
 var questions = [
     {
-    number: 1,
     title: "What type of language is JavaScript?",
     choices: [
         "Assembly-Language",
@@ -22,7 +21,6 @@ var questions = [
     answer:"Object-Based",
 },
 {
-    number: 2,
     title:" 'Function' and 'Var' are known as: ",
     choices: [
         "Keywords",
@@ -33,7 +31,6 @@ var questions = [
     answer:"Declaration statements",
 },
 {
-    number: 3,
     title:"Which of the following variables takes precedence over the others if the names are the same?",
     choices: [
         "Global variable",
@@ -44,7 +41,6 @@ var questions = [
     answer:"The local element",
 },
 {
-    number: 4,
     title:"What type of statements are IF statements?.",
     choices: [
         "Declaration",
@@ -55,7 +51,6 @@ var questions = [
     answer:"Conditional",
 },
 {
-    number: 5,
     title:"Functions must be _ to execute",
     choices: [
         "Deleted",
@@ -123,11 +118,14 @@ function setTime() {
 }
 
 // click event for user selecting question
-questionsScreen.addEventListener("click", questionChange); 
+questionsScreen.addEventListener("click", questionChange());
 
 //function to grab and append question objects 
-function questionChange() {
-    targe
+function questionChange(event) {
+    event.stopPropagation();
+
+
+   
     // loop through questions
     
 }
