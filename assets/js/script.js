@@ -4,6 +4,59 @@ var titleScreen = document.querySelector(".title-screen");
 var questionsScreen = document.querySelector(".questions-screen");
 var timeEl = document.querySelector("#time")
 
+//questions array
+var questions = [
+    {
+    title: "What type of language is JavaScript?",
+    choices: [
+        "Assembly-Language",
+        "Object-Based",
+        "Object-Orientated",
+        "High-level",
+    ],
+    answer:"Object-Based",
+},
+{
+    title:" 'Function' and 'Var' are known as: ",
+    choices: [
+        "Keywords",
+        "Data types",
+        "Declaration statements",
+        "Prototypes",
+    ],
+    answer:"Declaration statements",
+},
+{
+    title:"Which of the following variables takes precedence over the others if the names are the same?",
+    choices: [
+        "Global variable",
+        "The local element",
+        "The two of the above",
+        "None of the above",
+    ],
+    answer:"The local element",
+},
+{
+    title:"What type of statements are IF statements?.",
+    choices: [
+        "Declaration",
+        "Block",
+        "Loop",
+        "Conditional",
+    ],
+    answer:"Conditional",
+},
+{
+    title:"Functions must be _ to execute",
+    choices: [
+        "Deleted",
+        "Re-defined",
+        "Called",
+        "logged",
+
+    ],
+    answer:"Called",
+}];
 
 //variables to keep track of quiz state
 var secondsLeft = 90;
@@ -43,8 +96,9 @@ function setTime() {
         
         // display changing time on screen 
         timeEl.textContent = "Time: " + secondsLeft;
-         
-        console.log(secondsLeft);
+          console.log(secondsLeft);
+
+        //start function for penalty
 
         if (secondsLeft === 0) {
             // stops timer at end
@@ -59,3 +113,10 @@ function setTime() {
 }
 
 
+// get current question object from array
+	// update title with current question
+	// clear out any old question choices
+	// loop over choices
+	// create new button for each choice
+	// attach click event listener to each choice
+	// display on the page
