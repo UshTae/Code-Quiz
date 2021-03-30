@@ -150,20 +150,26 @@ function currentQuest() {
     button4.textContent = btn4;
 
     // attach click event listener to each choice
-    button1.addEventListener("click",validate(this));
-    button2.addEventListener("click",validate(this));
-    button3.addEventListener("click",validate(this));
-    button4.addEventListener("click",validate(this));
-    
-    //variable for answers in questions object
-    function validate(el){
-     var answerTrue = questions[i].answer;
-    console.log(answerTrue);
-    console.log(el.value)
-    }
+    button1.addEventListener("click",function(){
+        console.log(button1.id);
+    });
+
+    button2.addEventListener("click",function(){
+        console.log(button2.id);   
+    });
+
+    button3.addEventListener("click",function(){
+        console.log(button3.id);
+    });
+
+    button4.addEventListener("click",function(){
+        console.log(button4.id);
+         
+    });
     
     // if (answerTrue = the user answer, increase i by 1 else increase i
     // and run notAnswer()
+
 
 };
 
