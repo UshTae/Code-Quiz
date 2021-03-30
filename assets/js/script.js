@@ -129,11 +129,12 @@ function setTime() {
 };
 
 //GETTING QUESTIONS
-	
+	var i = 0;
+
 function currentQuest() {
     //add a loop??
    // get current question object from array
-    var i = 0;
+    
     var currentQuestion = questions[i].title;
     // update title with current question
     questionTitle.textContent = currentQuestion;
@@ -157,13 +158,11 @@ function currentQuest() {
         
         if (button1.id === questionAnsw){
          console.log("correct");
-         //increase i by 1
-         i++;
-         console.log(i);
+            isAnswer();
          //play function or start loop again??
         } else {
             console.log("incorrect");
-            i++;
+            
             notAnswer();
          //increase i by 1
          //play time function that contains a restart of this func
@@ -211,16 +210,21 @@ function currentQuest() {
     // and run notAnswer()
 
 
-// clear out any old question choices
-// loop over choices
-
-
-// display on the page
-
 // if answer wrong, time is taken away 
+function isAnswer() {
+    if (secondsLeft>=0){
+        //increase i by 1
+        i++;
+        currentQuest();
+    }
+};
+
 function notAnswer() {
     if (secondsLeft>=0){
        secondsLeft -=10;
+       //increase i by 1
+       i++;
+
         currentQuest(); 
     }
 };
