@@ -128,8 +128,6 @@ function setTime() {
 
 //GETTING QUESTION
 function currentQuest() {
-    //add a loop??
-   // get current question object from array
     
     var currentQuestion = questions[i].title;
     // update title with current question
@@ -194,7 +192,7 @@ function currentQuest() {
         console.log("correct");   
             isAnswer();
 
-        }  else {
+        } else {
             console.log("incorrect");
            
             notAnswer();
