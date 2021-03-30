@@ -7,7 +7,7 @@ var questionTitle = document.getElementById("title");
 var button1 = document.getElementById("1");
 var button2 = document.getElementById("2");
 var button3 = document.getElementById("3");
-var button4 = document.getElementById("4");
+var button4 = document.getElementById("4"); 
 
 //questions array
 var questions = [
@@ -76,7 +76,6 @@ questionsScreen.style.display = "none";
 //variables to keep track of quiz state
 var secondsLeft = 90;
 
-
 // display initial time on screen 
 timeEl.textContent = "Time: " + secondsLeft;
 
@@ -132,6 +131,7 @@ function setTime() {
 //GETTING QUESTIONS
 	
 function currentQuest() {
+    //add a loop??
    // get current question object from array
     var i = 0;
     var currentQuestion = questions[i].title;
@@ -149,30 +149,62 @@ function currentQuest() {
     button3.textContent = btn3;
     button4.textContent = btn4;
 
+    //question answer properties
+    var questionAnsw = questions[i].answer;
+
     // attach click event listener to each choice
     button1.addEventListener("click",function(){
-        console.log(button1.id);
+        
+        if (button1.id === questionAnsw){
+         console.log("correct");
+         //increase i by 1
+         i++;
+         console.log(i);
+         //play function or start loop again??
+        } else {
+            console.log("incorrect");
+            i++;
+            notAnswer();
+         //increase i by 1
+         //play time function that contains a restart of this func
+        }
     });
 
     button2.addEventListener("click",function(){
-        console.log(button2.id);   
+
+        if (button2.id === questionAnsw) {
+         console.log("correct");
+         //increase i by 1
+         i++;
+         console.log(i);
+         return;
+         //play function or start loop again??'  
+        } else {
+            console.log("incorrect");
+            i++;
+            notAnswer();
+        }
     });
 
     button3.addEventListener("click",function(){
-        console.log(button3.id);
+
+        if (button3.id === questionAnsw) {
+          console.log("correct");  
+        } else {
+            console.log("incorrect");
+        }
     });
 
     button4.addEventListener("click",function(){
-        console.log(button4.id);
-         
+        if (button3.id === questionAnsw) {
+        console.log("correct");    
+        }  else {
+            console.log("incorrect");
+        }
     });
-    
-    // if (answerTrue = the user answer, increase i by 1 else increase i
-    // and run notAnswer()
-
-
 };
-
+// if (answerTrue = the user answer, increase i by 1 else increase i
+    // and run notAnswer()
 
 
 // clear out any old question choices
@@ -183,6 +215,8 @@ function currentQuest() {
 
 // if answer wrong time is taken away 
 function notAnswer() {
-    secondsLeft -=10;
-    questionChange();
+    for (i = secondsLeft; i>= 0; i++ ){
+        secondsLeft -=10;
+        currentQuest();
+    }
 };
