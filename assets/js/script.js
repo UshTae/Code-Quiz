@@ -21,8 +21,7 @@ var questions = [
         "High-level",
     ],
     answer:"2",
-},
-{
+},{
         //q2
     title:" 'Function' and 'Var' are known as: ",
     choices: [
@@ -32,20 +31,8 @@ var questions = [
         "Prototypes",
     ],
     answer:"3",
-},
-{
+},{
         //q3
-    title:"Which of the following variables takes precedence over the others if the names are the same?",
-    choices: [
-        "Global variable",
-        "The local element",
-        "The two of the above",
-        "None of the above",
-    ],
-    answer:"2",
-},
-{
-        //q4
     title:"What type of statements are IF statements?.",
     choices: [
         "Declaration",
@@ -54,9 +41,8 @@ var questions = [
         "Conditional",
     ],
     answer:"4",
-},
-{
-        //q5
+},{
+        //q4
     title:"Functions must be _ to execute",
     choices: [
         "Deleted",
@@ -66,7 +52,18 @@ var questions = [
 
     ],
     answer:"3",
-}];
+},{
+        //q5
+    title:"Which of the following variables takes precedence over the others if the names are the same?",
+    choices: [
+        "Global variable",
+        "The local element",
+        "The two of the above",
+        "None of the above",
+    ],
+    answer:"2",
+},
+];
 
 // hide questions section by default 
 questionsScreen.style.display = "block";
