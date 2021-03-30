@@ -75,6 +75,7 @@ questionsScreen.style.display = "none";
 
 //variables to keep track of quiz state
   var secondsLeft = 90;
+  var i = 0;
 
 // display initial time on screen 
 timeEl.textContent = "Time: " + secondsLeft;
@@ -128,9 +129,7 @@ function setTime() {
     
 };
 
-//GETTING QUESTIONS
-	var i = 0;
-
+//GETTING QUESTION
 function currentQuest() {
     //add a loop??
    // get current question object from array
@@ -159,13 +158,11 @@ function currentQuest() {
         if (button1.id === questionAnsw){
          console.log("correct");
             isAnswer();
-         //play function or start loop again??
+         
         } else {
             console.log("incorrect");
             
             notAnswer();
-         //increase i by 1
-         //play time function that contains a restart of this func
         }
     });
 
@@ -173,14 +170,11 @@ function currentQuest() {
 
         if (button2.id === questionAnsw) {
          console.log("correct");
-         //increase i by 1
-         i++;
-         console.log(i);
-         return;
-         //play function or start loop again??'  
+            isAnswer();
+
         } else {
             console.log("incorrect");
-            i++;
+            
             notAnswer();
         }
     });
@@ -188,33 +182,35 @@ function currentQuest() {
     button3.addEventListener("click",function(){
 
         if (button3.id === questionAnsw) {
-          console.log("correct");  
+          console.log("correct");
+            isAnswer();
+
         } else {
             console.log("incorrect");
-            i++;
+            
             notAnswer();
         }
     });
 
     button4.addEventListener("click",function(){
         if (button3.id === questionAnsw) {
-        console.log("correct");    
+        console.log("correct");   
+            isAnswer();
+
         }  else {
             console.log("incorrect");
-            i++;
+           
             notAnswer();
         }
     });
 };
-// if (answerTrue = the user answer, increase i by 1 else increase i
-    // and run notAnswer()
-
 
 // if answer wrong, time is taken away 
 function isAnswer() {
     if (secondsLeft>=0){
         //increase i by 1
         i++;
+
         currentQuest();
     }
 };
