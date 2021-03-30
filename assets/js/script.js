@@ -74,7 +74,7 @@ questionsScreen.style.display = "none";
 
 
 //variables to keep track of quiz state
-var secondsLeft = 90;
+  var secondsLeft = 90;
 
 // display initial time on screen 
 timeEl.textContent = "Time: " + secondsLeft;
@@ -116,7 +116,7 @@ function setTime() {
 
         //start function for penalty
 
-        if (secondsLeft === 0) {
+        if (secondsLeft <= 0) {
             // stops timer at end
             clearInterval(timerInterval);
 
@@ -192,6 +192,8 @@ function currentQuest() {
           console.log("correct");  
         } else {
             console.log("incorrect");
+            i++;
+            notAnswer();
         }
     });
 
@@ -200,6 +202,8 @@ function currentQuest() {
         console.log("correct");    
         }  else {
             console.log("incorrect");
+            i++;
+            notAnswer();
         }
     });
 };
@@ -213,7 +217,7 @@ function currentQuest() {
 
 // display on the page
 
-// if answer wrong time is taken away 
+// if answer wrong, time is taken away 
 function notAnswer() {
     if (secondsLeft>=0){
        secondsLeft -=10;
