@@ -215,7 +215,7 @@ function currentQuest() {
 
 // if answer wrong time is taken away 
 function notAnswer() {
-    for (i = secondsLeft; i>= 0; i++ ){
+    for (i = secondsLeft; i<0;){
         secondsLeft -=10;
         currentQuest();
     }
